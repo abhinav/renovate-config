@@ -3,5 +3,9 @@
   "extends": [
     "config:recommended",
     "group:allNonMajor"
+  ],
+  "postUpdateOptions": [
+    "gomodTidy",
+    "gomodUpdateImportPaths"
   ]
 }
