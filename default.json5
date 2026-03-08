@@ -12,7 +12,15 @@
       // Group all GitHub Actions together regardless of version.
       matchManagers: ["github-actions"],
       groupName: "GitHub Actions"
-    }
+    },
+
+    {
+      // For mise-managed Go versions with "oldstable" environment,
+      // only upgrade to the previous minor release.
+      matchPackageNames: ["go"],
+      matchFileNames: ["mise.oldstable.toml", "**/mise.oldstable.toml"],
+      allowedVersions: "<= 1.25",
+    },
   ],
 
   // Most Go repositories have a lint job that verifies 'go mod tidy'
