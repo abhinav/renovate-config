@@ -17,7 +17,8 @@
     {
       // For mise-managed Go versions with "oldstable" environment,
       // only upgrade to the previous minor release.
-      matchPackageNames: ["go"],
+      matchManagers: ["mise"],
+      matchDepNames: ["go"],
       matchFileNames: ["mise.oldstable.toml", "**/mise.oldstable.toml"],
       allowedVersions: "<= 1.25",
     },
