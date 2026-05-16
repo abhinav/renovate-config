@@ -7,6 +7,11 @@
     "schedule:earlyMondays",
   ],
 
+  // Hold dependency releases for a week before raising upgrade PRs.
+  minimumReleaseAge: "7 days",
+  internalChecksFilter: "strict",
+  prCreation: "not-pending",
+
   packageRules: [
     {
       // Group all GitHub Actions together regardless of version.
